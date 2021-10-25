@@ -94,3 +94,9 @@
 35. `umount -l /mnt`
 
 36. `reboot` or `shutdown now`
+
+# Xorg, dwm, dmenu, st
+
+## On Virtualbox VM
+
+1. `sudo pacman -S xf86-video-fbdev xorg xorg-xinit nitrogen picom st firefox` → `<default>` → `<default> → `y
