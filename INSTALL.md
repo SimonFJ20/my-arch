@@ -49,9 +49,13 @@
 
 16. `locale-gen`
 
-17. `vim /etc/hostname` → `<hostname>`
+17. `vim /etc/locale.conf` → `LANG=en_DK.UTF-8`
 
-18. `vim /etc/hosts`
+18. `vim /etc/vconsole.conf` → `KEYMAP=dk-latin1`
+
+19. `vim /etc/hostname` → `<hostname>`
+
+20. `vim /etc/hosts`
 
     ```
     127.0.0.1    localhost
@@ -59,35 +63,34 @@
     127.0.1.1    <hostname>.localdomain  <hostname>
     ```
 
-19. `passwd` → `<password>` → `<password>`
+21. `passwd` → `<password>` → `<password>`
 
-20. `useradd -m <username>`
+22. `useradd -m <username>`
 
-21. `passwd <username>` → `<password>` → `<password>`
+23. `passwd <username>` → `<password>` → `<password>`
 
-22. `usermod -aG wheel,audio,video,optical,storage <username>`
+24. `usermod -aG wheel,audio,video,optical,storage <username>`
 
-23. `pacman -S sudo` → `y`
+25. `pacman -S sudo` → `y`
 
-24. `EDITOR=vim visudo` → uncomment `%wheel ALL=(ALL) ALL`
+26. `EDITOR=vim visudo` → uncomment `%wheel ALL=(ALL) ALL`
 
-25. `pacman -S grub efibootmgr dosfstools os-prober mtools` → `y`
+27. `pacman -S grub efibootmgr dosfstools os-prober mtools` → `y`
 
-26. `mkdir /boot/EFI`
+28. `mkdir /boot/EFI`
 
-27. `mount /dev/sda1 /boot/EFI`
+29. `mount /dev/sda1 /boot/EFI`
 
-28. `grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck`
+30. `grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck`
 
-29. `grub-mkconfig -o /boot/grub/grub.cfg`
+31. `grub-mkconfig -o /boot/grub/grub.cfg`
 
-30. `pacman -S networkmanager git` → `y`
+32. `pacman -S networkmanager git` → `y`
 
-31. `systemctl enable NetworkManager`
+33. `systemctl enable NetworkManager`
 
-32. `exit`
+34. `exit`
 
-33. `umount -l /mnt`
+35. `umount -l /mnt`
 
-34. `reboot` or `shutdown now`
-
+36. `reboot` or `shutdown now`
