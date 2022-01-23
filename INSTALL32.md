@@ -20,7 +20,7 @@ Partition | Type | Size
 `swapon /dev/sda1`
 
 [Erich Eckner fix](https://bbs.archlinux32.org/viewtopic.php?id=3023)
-`curl -Ss https://archlinux32.org/keys.php?k=5FDCA472AB93292BC678FD59255A76DB9A12601A | gpg --homedir /etc/pacman.d/gnupg --import`, sorry in advance.
+`curl -Ss https://archlinux32.org/keys.php?k=5FDCA472AB93292BC678FD59255A76DB9A12601A | gpg --homedir /etc/pacman.d/gnupg --import`, sorry in advance.
 You could download the long url from a shorter url using `curl https://paste.ee/d/7ejmY/0 > url.txt` and then `$(cat url.txt)`.
 
 `pacstrap /mnt base linux linux-firmware sudo base-devel git neovim <intel|amd>-ucode grub efibootmgr dosfstools os-prober mtools networkmanager`
