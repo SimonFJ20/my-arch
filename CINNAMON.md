@@ -51,7 +51,7 @@ If connected via. ethernet, skip this step.
 7. Generate locale(s): `locale-gen`
 8. Set language: `echo "LANG=en_DK.UTF-8" > /etc/locale.conf`
 9. Set keyboard layout: `echo "KEYMAP=dk-latin1" > /etc/vconsole.conf`
-10. Set hostname: `echo "<hsotname>" > /etc/hostname`
+10. Set hostname: `echo "<hostname>" > /etc/hostname`
 11. Append IPv4 localhost: `echo "127.0.0.1 localhost" >> /etc/hosts`
 12. Append IPv6 localhost: `echo "::1 localhost" >> /etc/hosts`
 13. Append localdomain: `echo "127.0.1.1 <hostname>.localdomain <hostname>" >> /etc/hosts`
@@ -63,7 +63,7 @@ If connected via. ethernet, skip this step.
 2. Create new user: `useradd -m <username>`
 3. Set user password: `passwd <username>`
 4. Set user permissions: `usermod -aG wheel,audio,video,optical,storage <username>`
-5. Set `sudo` permissions: `sed 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/g' /etc/locale.gen` /etc/sudoers
+5. Set `sudo` permissions: Uncomment `# %wheel ALL=(ALL) ALL` in the `/etc/sudoers` file
 
 ### Setup Boot manager
 
