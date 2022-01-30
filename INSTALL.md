@@ -33,7 +33,7 @@
 
 8. `mount /dev/sda3 /mnt`
 
-9. `pacstrap /mnt base linux linux-firmware`
+9. `pacstrap /mnt base linux linux-firmware vim sudo grub efibootmgr dosfstools os-prober mtools networkmanager git`
 
 10. `genfstab -U /mnt >> /mnt/etc/fstab`
 
@@ -42,8 +42,6 @@
 12. `ln -sf /usr/share/zoneinfo/Europe/Copenhagen`
 
 13. `hwclock --systohc`
-
-14. `pacman -S vim` → `y`
 
 15. `vim /etc/locale.gen` → uncomment `en_DK.UTF-8 UTF-8`
 
@@ -71,11 +69,7 @@
 
 24. `usermod -aG wheel,audio,video,optical,storage <username>`
 
-25. `pacman -S sudo` → `y`
-
 26. `EDITOR=vim visudo` → uncomment `%wheel ALL=(ALL) ALL`
-
-27. `pacman -S grub efibootmgr dosfstools os-prober mtools` → `y`
 
 28. `mkdir /boot/EFI`
 
@@ -84,8 +78,6 @@
 30. `grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck`
 
 31. `grub-mkconfig -o /boot/grub/grub.cfg`
-
-32. `pacman -S networkmanager git` → `y`
 
 33. `systemctl enable NetworkManager`
 
