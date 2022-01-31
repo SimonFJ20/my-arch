@@ -192,7 +192,7 @@ lat=43
 lon=1
 [randr]
 screen=0
-```https:
+```
 
 ### Setup fonts
 
