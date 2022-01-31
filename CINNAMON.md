@@ -110,7 +110,7 @@ Skip this step if unsure
 
 ### Install Themes
 
-1. Install Cinnamon icons and theme: `sudo pacman -S papirus-icon-theme arc-gtk-theme`
+1. Install Cinnamon icons and theme: `sudo pacman -S papirus-icon-theme arc-gtk-theme ttf-ubuntu-font-family`
 2. Install GTK theme: `yay -S yaru-gtk-theme`
 3. Install Cursor theme: `yay -S oreo-nord-cursors-git`
 4. Configure GTK theme in `/etc/gtk-3.0/settings.ini`: *see below*
