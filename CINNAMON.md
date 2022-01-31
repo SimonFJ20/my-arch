@@ -192,7 +192,29 @@ lat=43
 lon=1
 [randr]
 screen=0
+```https:
+
+### Setup fonts
+
+1. Install fonts: `sudo pacman -S tff-fira-code ttf-dejavu ttf-ubuntu-family`
+2. Set default fonts in `/etc/fonts/local.conf`
+3. Set Cinnamon fonts
+
+`/etc/fonts/local.conf`
+```xml
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<fontconfig>
+    <alias>
+        <family>Nimbus</family>
+        <prefer>
+           <family>DejaVu</family>
+        </prefer>
+    </alias>
+</fontconfig>
 ```
+
+![Screenshot from 2022-02-01 00-46-08](https://user-images.githubusercontent.com/28040410/151891580-a10e41e5-436e-46f7-a459-b9bd58e7e6f9.png)
 
 ## Sources
 
