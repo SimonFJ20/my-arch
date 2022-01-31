@@ -99,6 +99,7 @@ Skip this step if unsure
 1. Select the [video driver](https://wiki.archlinux.org/title/Xorg#Driver_installation) of your liking.
 2. Install [Xorg](https://wiki.archlinux.org/title/Xorg), [Cinnamon](https://wiki.archlinux.org/title/Cinnamon#Installation) and [LightDM](https://wiki.archlinux.org/title/LightDM): `sudo pacman -S xorg <video driver> cinnamon lightdm lightdm-gtk-greeter`
 3. Enable startup on boot: `sudo systemctl enable lightdm`
+4. If computer is 🚀🚀🚀, set `logind-check-graphical` to `true` in `/etc/lightdm/lightdm.conf`
 
 ### Install utilities
 
@@ -131,6 +132,12 @@ gtk-icon-sizes = panel-menu-bar=24,24
 1. Make scripts folder: `mkdir .scripts -p`
 2. Download `spath.py`: `wget https://gist.githubusercontent.com/SimonFJ20/a1ac9e1eaa73db95bc8fdcfca2c7f5a1/raw/6e171d89e023f7c4b60a72042c74f099f864886b/spath.py -o .scripts/spath.py`
 3. Download `.bashrc`: `wget https://gist.githubusercontent.com/SimonFJ20/a0a9104a13a725ac6c835e07b9529998/raw/61259ccb5dfc800feee9fbfb85adb03ce1ef99d5/.bashrc -o .bashrc`
+4. Either fix Rustup Cargo ENV or remove it from config
+
+### Setup GNOME Terminal
+
+1. Set font to `Source Code Pro Regular 14`
+2. Set colorscheme
 
 ```
 Soft Server custom colorscheme for GNOME Terminal
@@ -162,8 +169,33 @@ light-cyan          #64E39C
 light-white         #D2E0DE
 ```
 
+### Setup Redshift for bluelight-filter
+
+1. Install [Redshift](https://wiki.archlinux.org/title/Redshift): `sudo pacman -S redshift`
+2. Place config in `~/.config/redshift.conf`
+3. Enable on boot: `systemctl --user enable redshift-gtk.service`
+4. Start: `systemctl --user start redshift-gtk.service`
+
+`~/.config/redshift.conf`
+```
+[redshift]
+; Set the day and night screen temperatures
+temp-day=3800
+temp-night=3800
+transition=1
+;brightness=0.9
+gamma=0.9
+location-provider=manual
+adjustment-method=randr
+[manual]
+lat=43
+lon=1
+[randr]
+screen=0
+```
+
 ## Sources
 
-[How to Install Cinnamon Desktop in Arch Linux - debugpoint.org](https://www.debugpoint.com/2021/02/cinnamon-arch-linux-install/)
-[Cinnamon - Arch Wiki](https://wiki.archlinux.org/title/Cinnamon#Installation)
-
+- [How to Install Cinnamon Desktop in Arch Linux - debugpoint.org](https://www.debugpoint.com/2021/02/cinnamon-arch-linux-install/)
+- [Cinnamon - Arch Wiki](https://wiki.archlinux.org/title/Cinnamon#Installation)
+- [How to Fix – Failed to Start Light Display Manager](https://www.debugpoint.com/2021/03/failed-to-start-lightdm/)
