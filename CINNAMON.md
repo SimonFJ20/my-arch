@@ -132,6 +132,36 @@ gtk-icon-sizes = panel-menu-bar=24,24
 2. Download `spath.py`: `wget https://gist.githubusercontent.com/SimonFJ20/a1ac9e1eaa73db95bc8fdcfca2c7f5a1/raw/6e171d89e023f7c4b60a72042c74f099f864886b/spath.py -o .scripts/spath.py`
 3. Download `.bashrc`: `wget https://gist.githubusercontent.com/SimonFJ20/a0a9104a13a725ac6c835e07b9529998/raw/61259ccb5dfc800feee9fbfb85adb03ce1ef99d5/.bashrc -o .bashrc`
 
+```
+Soft Server custom colorscheme for GNOME Terminal
+
+font: Source Code Pro 14
+
+default-text        #99A3A2
+default-background  #242626
+
+cursor-text         #242626
+cursor-background   #99A3A2
+
+dark-black          #000000
+dark-red            #A2686A
+dark-green          #9AA56A
+dark-yellow         #A3906A
+dark-blue           #6B8FA3
+dark-magenta        #6A71A3
+dark-cyan           #6BA58F
+dark-white          #99A3A2
+
+light-black         #666C6C
+light-red           #DD5C60
+light-green         #BFDF55
+light-yellow        #DEB360
+light-blue          #62B1DF
+light-magenta       #606EDF
+light-cyan          #64E39C
+light-white         #D2E0DE
+```
+
 ## Sources
 
 [How to Install Cinnamon Desktop in Arch Linux - debugpoint.org](https://www.debugpoint.com/2021/02/cinnamon-arch-linux-install/)
