@@ -43,7 +43,7 @@ If connected via. ethernet, skip this step.
 ### Download, install and setup Arch
 
 1. Download and install: `pacstrap /mnt base linux linux-firmware base-devel vim sudo grub efibootmgr dosfstools os-prober mtools networkmanager git`
-2. Set mountables on boot: `genfstab -U >> /mnt/etc/fstab`
+2. Set mountables on boot: `genfstab -U /mnt >> /mnt/etc/fstab`
 3. Switch operation into new system (enter chroot): `arch-chroot /mnt`
 4. Set timezone: `ln -sf /usr/share/zoneinfo/Europe/Copenhagen`
 5. Set hardwareclock: `hwclock -w`
