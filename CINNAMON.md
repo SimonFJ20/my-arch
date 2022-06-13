@@ -131,8 +131,8 @@ gtk-icon-sizes = panel-menu-bar=24,24
 ### Setup Bash
 
 1. Make scripts folder: `mkdir .scripts -p`
-2. Download `spath.py`: `wget https://gist.githubusercontent.com/SimonFJ20/a1ac9e1eaa73db95bc8fdcfca2c7f5a1/raw/6e171d89e023f7c4b60a72042c74f099f864886b/spath.py -o .scripts/spath.py`
-3. Download `.bashrc`: `wget https://gist.githubusercontent.com/SimonFJ20/a0a9104a13a725ac6c835e07b9529998/raw/61259ccb5dfc800feee9fbfb85adb03ce1ef99d5/.bashrc -o .bashrc`
+2. Download `spath.py`: `wget https://gist.githubusercontent.com/SimonFJ20/a1ac9e1eaa73db95bc8fdcfca2c7f5a1/raw/6e171d89e023f7c4b60a72042c74f099f864886b/spath.py -O .scripts/spath.py`
+3. Download `.bashrc`: `wget https://gist.githubusercontent.com/SimonFJ20/a0a9104a13a725ac6c835e07b9529998/raw/61259ccb5dfc800feee9fbfb85adb03ce1ef99d5/.bashrc -O .bashrc`
 4. Either fix Rustup Cargo ENV or remove it from config
 
 ### Setup GNOME Terminal
