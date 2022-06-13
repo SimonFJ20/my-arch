@@ -81,7 +81,7 @@ If connected via. ethernet, skip this step.
 
 ## Install Cinnamon
 
-Packages that will be installed: `xorg <video driver> cinnamon lightdm lightdm-gtk-greeter pulseaudio pulseaudio-alsa pavucontrol firefox vlc gimp xed gnome-system-monitor papirus-icon-theme arc-gtk-theme`
+Some of the packages that will be installed: `xorg <video driver> cinnamon lightdm lightdm-gtk-greeter pulseaudio pulseaudio-alsa pavucontrol firefox vlc gimp xed gnome-system-monitor papirus-icon-theme arc-gtk-theme`
 
 ### Install YAY
 
@@ -113,9 +113,10 @@ Skip this step if unsure
 
 1. Install Cinnamon icons and theme: `sudo pacman -S papirus-icon-theme arc-gtk-theme ttf-ubuntu-font-family`
 2. Install GTK theme: `yay -S yaru-gtk-theme`
-3. Install Cursor theme: `yay -S oreo-nord-cursors-git`
-4. Configure GTK theme in `/etc/gtk-3.0/settings.ini`: *see below*
-5. Set Cinnamon theme in the `Themes` application: *see below*
+3. Download Cursor theme: `git clone https://github.com/alvatip/Nordzy-cursors`
+4. Install Cursor Theme: `cd Nordzy-cursors && ./install.sh && cd .. && rm -rf Nordzy-cursors`
+5. Configure GTK theme in `/etc/gtk-3.0/settings.ini`: *see below*
+6. Set Cinnamon theme in the `Themes` application: *see below*
 
 `/etc/gtk-3.0/settings.ini`:
 ```ini
