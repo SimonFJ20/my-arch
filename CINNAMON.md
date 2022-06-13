@@ -47,7 +47,7 @@ If connected via. ethernet, skip this step.
 3. Switch operation into new system (enter chroot): `arch-chroot /mnt`
 4. Set timezone: `ln -sf /usr/share/zoneinfo/Europe/Copenhagen`
 5. Set hardwareclock: `hwclock -w`
-6. Select locale(s) to be generated: `sed 's/# en_DK.UTF-8 UTF-8/en_DK.UTF-8 UTF-8/g' /etc/locale.gen`
+6. Select locale(s) to be generated: `sed 's/#en_DK.UTF-8 UTF-8/en_DK.UTF-8 UTF-8/g' -i /etc/locale.gen`
 7. Generate locale(s): `locale-gen`
 8. Set language: `echo "LANG=en_DK.UTF-8" > /etc/locale.conf`
 9. Set keyboard layout: `echo "KEYMAP=dk-latin1" > /etc/vconsole.conf`
